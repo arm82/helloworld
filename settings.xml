@@ -34,7 +34,7 @@
             <server>
                 <id>snapshots</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
