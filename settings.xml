@@ -16,7 +16,7 @@
             <server>
                 <id>releases</id>
                 <username>bongo-01</username>
-                <password>{rBXmVy7XB5D2g8kJ}</password>
+                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
                 <configuration>
                     <!-- Optimize authentication time when downloading.
                     Find out more: http://maven.apache.org/guides/mini/guide-http-settings.html#Example:_Using_Preemptive_Authentication -->
@@ -31,7 +31,7 @@
             <server>
                 <id>snapshots</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -44,7 +44,7 @@
             <server>
                 <id>bongo-group</id>
                 <username>bongo-01</username>
-                <password>(rBXmVy7XB5D2g8kJ}</password>
+                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -86,7 +86,7 @@
             <id>kazan-sonar</id>
             <properties>
                 <sonar.host.url>https://kazan.priv.atos.fr:443/sonarqube</sonar.host.url>
-                <sonar.login>{AN/mTUQ9uMMHJK0ZH4KK5AEQJcNnNa9ZXq2Vn9osui0SpcSqcoWz7MDEkGBj8zh4cUhUPR5o2HeyFrC2THpTaQ&#61;&#61;}</sonar.login>
+                <sonar.login>{hvZGEoyIIJgHJ1kfVU0cytEsqjSEmqG8bGhw/616+8+QwhcY9Kfq7Mv4hOdRvaCZCCKARN/0i0sjiW9tY1TkUg&#61;&#61;}</sonar.login>
             </properties>
         </profile>
     </profiles>
