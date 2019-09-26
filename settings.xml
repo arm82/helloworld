@@ -44,7 +44,7 @@
             <server>
                 <id>bongo-group</id>
                 <username>bongo-01</username>
-                <password>{rBXmVy7XB5D2g8kJ}</password>
+                <password>rBXmVy7XB5D2g8kJ</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
