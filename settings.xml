@@ -16,7 +16,7 @@
             <server>
                 <id>releases</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>{rBXmVy7XB5D2g8kJ}</password>
                 <configuration>
                     <!-- Optimize authentication time when downloading.
                     Find out more: http://maven.apache.org/guides/mini/guide-http-settings.html#Example:_Using_Preemptive_Authentication -->
@@ -31,7 +31,7 @@
             <server>
                 <id>snapshots</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>{rBXmVy7XB5D2g8kJ}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -44,7 +44,7 @@
             <server>
                 <id>bongo-group</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>(rBXmVy7XB5D2g8kJ}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
