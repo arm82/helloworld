@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+          xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--<proxies>
+        <proxy>
+               <id>proxy-prod</id>
+               <port>3128</port>
+               <host>proxy-prod-scl.svc.meshcore.net</host>
+               <nonProxyHosts>127.0.0.1|localhost|*.priv.atos.fr|*.meshcore.net
+               </nonProxyHosts>
+           </proxy>
+    </proxies>-->
+
+    <servers>
+
+            <server>
+                <id>releases</id>
+                <username>bongo-01</username>
+                <password>{dfqFfN0Dip0Hmh2bcRehTTI4WfQNGK6t9/eWAbiutDuPjpG1qX+hFzqoHW6X04sU}</password>
+                <configuration>
+                    <!-- Optimize authentication time when downloading.
+                    Find out more: http://maven.apache.org/guides/mini/guide-http-settings.html#Example:_Using_Preemptive_Authentication -->
+                    <wagonProvider>httpclient</wagonProvider>
+                    <httpConfiguration>
+                        <all>
+                            <usePreemptive>true</usePreemptive>
+                        </all>
+                    </httpConfiguration>
+                </configuration>
+            </server>
+            <server>
+                <id>snapshots</id>
+                <username>bongo-01</username>
+                <password>{dfqFfN0Dip0Hmh2bcRehTTI4WfQNGK6t9/eWAbiutDuPjpG1qX+hFzqoHW6X04sU}</password>
+                <configuration>
+                    <wagonProvider>httpclient</wagonProvider>
+                    <httpConfiguration>
+                        <all>
+                            <usePreemptive>true</usePreemptive>
+                        </all>
+                    </httpConfiguration>
+                </configuration>
+            </server>
+            <server>
+                <id>bongo-group</id>
+                <username>bongo-01</username>
+                <password>{dfqFfN0Dip0Hmh2bcRehTTI4WfQNGK6t9/eWAbiutDuPjpG1qX+hFzqoHW6X04sU}</password>
+                <configuration>
+                    <wagonProvider>httpclient</wagonProvider>
+                    <httpConfiguration>
+                        <all>
+                            <usePreemptive>true</usePreemptive>
+                        </all>
+                    </httpConfiguration>
+                </configuration>
+            </server>
+    </servers>
+
+        <mirrors>
+            <mirror>
+                <mirrorOf>*</mirrorOf>
+                <url>https://nexus.kazan.priv.atos.fr/repository/bongo-group</url>
+                <id>bongo-group</id>
+            </mirror>
+        </mirrors>
+
+    <profiles>
+        <profile>
+            <repositories>
+                <repository>
+                    <!-- Find out more: https://help.sonatype.com/repomanager3/formats/maven-repositories -->
+                    <id>central</id>
+                    <url>http://central</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <!-- Find out more: https://help.sonatype.com/repomanager3/formats/maven-repositories -->
+                    <id>central</id>
+                    <url>http://central</url>
+                </pluginRepository>
+            </pluginRepositories>
+            <id>kazan-nexus</id>
+        </profile>
+        <profile>
+            <id>kazan-sonar</id>
+            <properties>
+                <sonar.host.url>https://kazan.priv.atos.fr:443/sonarqube</sonar.host.url>
+                <sonar.login>{AN/mTUQ9uMMHJK0ZH4KK5AEQJcNnNa9ZXq2Vn9osui0SpcSqcoWz7MDEkGBj8zh4cUhUPR5o2HeyFrC2THpTaQ&#61;&#61;}</sonar.login>
+            </properties>
+        </profile>
+    </profiles>
+
+        <activeProfiles>
+            <activeProfile>kazan-nexus</activeProfile>
+            <activeProfile>kazan-sonar</activeProfile>
+        </activeProfiles>
+</settings>
