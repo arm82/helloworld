@@ -11,17 +11,12 @@
            </proxy>
     </proxies>-->
 
-    <settingsSecurity>
-      <relocation>/LOCAL_DATA/jenkins/workspace/bongo/bongo/settings-security.xml</relocation>
-    </settingsSecurity>
-          
-
     <servers>
 
             <server>
                 <id>releases</id>
                 <username>bongo-01</username>
-                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
+                <password>{7hhZUig5mJQHELosaIy7GYM1eZ2Lr0lkwFkBiN32/5x3+4hMx4X4FWmLq2pR0QHl}</password>
                 <configuration>
                     <!-- Optimize authentication time when downloading.
                     Find out more: http://maven.apache.org/guides/mini/guide-http-settings.html#Example:_Using_Preemptive_Authentication -->
@@ -36,7 +31,7 @@
             <server>
                 <id>snapshots</id>
                 <username>bongo-01</username>
-                <password>YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r</password>
+                <password>{7hhZUig5mJQHELosaIy7GYM1eZ2Lr0lkwFkBiN32/5x3+4hMx4X4FWmLq2pR0QHl}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -49,7 +44,7 @@
             <server>
                 <id>bongo-group</id>
                 <username>bongo-01</username>
-                <password>{YStM35E6IqcHNOQGuKOj5ImuZqUVAZQ6osIQR8jz7J5DrqRqieyrwuXs49m6oW1r}</password>
+                <password>{7hhZUig5mJQHELosaIy7GYM1eZ2Lr0lkwFkBiN32/5x3+4hMx4X4FWmLq2pR0QHl}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -64,7 +59,7 @@
         <mirrors>
             <mirror>
                 <mirrorOf>*</mirrorOf>
-                <url>https://nexus.kazan.priv.atos.fr/repository/bongo-group</url>
+                <url>https://nexus.kazan.atosworldline.com/repository/bongo-group</url>
                 <id>bongo-group</id>
             </mirror>
         </mirrors>
@@ -91,7 +86,7 @@
             <id>kazan-sonar</id>
             <properties>
                 <sonar.host.url>https://kazan.priv.atos.fr:443/sonarqube</sonar.host.url>
-                <sonar.login>{hvZGEoyIIJgHJ1kfVU0cytEsqjSEmqG8bGhw/616+8+QwhcY9Kfq7Mv4hOdRvaCZCCKARN/0i0sjiW9tY1TkUg&#61;&#61;}</sonar.login>
+                <sonar.login>{66j7Qs0lANUHv24yPvMPvrV4Ca3QQMl5L50nGBEwslrAMQl4kGgJKyeDOFax3tgev+3+7UoLLcIOQ3huwNpmkA&#61;&#61;}</sonar.login>
             </properties>
         </profile>
     </profiles>
