@@ -36,16 +36,18 @@
     </plugins>
   </build>
   
-  <distributionManagement>
+  <!-- TO UPLOAD MAVEN ARTIFACTS -->
+<distributionManagement>
+
     <repository>
         <id>releases</id>
         <name>My private Kazan Release Repository</name>
-        <url>https://nexus.kazan.priv.atos.fr/repository/bongo-releases/</url>
+        <url>https://nexus.kazan.atosworldline.com/repository/bongo-releases</url>
     </repository>
     <snapshotRepository>
         <id>snapshots</id>
         <name>My private Kazan Snapshot Repository</name>
-        <url>https://nexus.kazan.priv.atos.fr/repository/bongo-snapshots/</url>
+        <url>https://nexus.kazan.atosworldline.com/repository/bongo-snapshots</url>
     </snapshotRepository>
 </distributionManagement>
   
