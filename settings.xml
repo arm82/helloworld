@@ -11,7 +11,9 @@
            </proxy>
     </proxies>-->
 
-          
+    <settingsSecurity>
+      <relocation>/LOCAL_DATA/jenkins/workspace/bongo/bongo/settings-security.xml</relocation>
+    </settingsSecurity>
           
 
     <servers>
