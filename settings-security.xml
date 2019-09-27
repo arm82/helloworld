@@ -1,3 +1,7 @@
 <settingsSecurity>
     <master>{MZ0WIVHDLnYHxZkCdxxH6I2euAdaW4dMBJe49PyEedQ&#61;}</master>
 </settingsSecurity>
+
+    <settingsSecurity>
+      <relocation>/LOCAL_DATA/jenkins/workspace/bongo/bongo/settings-security.xml</relocation>
+    </settingsSecurity>
