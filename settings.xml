@@ -1,22 +1,38 @@
 <?xml version="1.0"?>
 <settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
           xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-<!--<proxies>
+    <proxies>
+        <!-- YOUR PROXY CONFIGURATION -->
+        <!-- FOR YOUR PRODUCTION SERVERS USAGE: -->
+        <!--
         <proxy>
-               <id>proxy-prod</id>
-               <port>3128</port>
-               <host>proxy-prod-scl.svc.meshcore.net</host>
-               <nonProxyHosts>127.0.0.1|localhost|*.priv.atos.fr|*.meshcore.net
-               </nonProxyHosts>
-           </proxy>
-    </proxies>-->
+            <id>proxy-prod</id>
+            <port>3128</port>
+            <host>proxy-prod-scl.svc.meshcore.net</host>
+            <nonProxyHosts>127.0.0.1|localhost|*.priv.atos.fr|*.meshcore.net</nonProxyHosts>
+        </proxy>
+        -->
+        <!-- ON YOUR LOCAL MACHINE: -->
+        <!--
+        <proxy>
+            <id>proxy-local</id>
+            <port>3128</port>
+            <host>proxy-internet.localnet</host>
+            <nonProxyHosts>127.0.0.1|localhost|*.priv.atos.fr|*.meshcore.net</nonProxyHosts>
+        </proxy>
+        -->
+    </proxies>
+
+    <!-- Attention: Uncomment the following line to enable the shared cache, only if you use Kazan Shared Runner and you don't have PCI constraints on dependencies. More informations refer to: https://kazan-community.gitlab-pages.kazan.myworldline.com/documentation/gitlab/shared-runners.html#shared-cache 
+-->
+    <!--<localRepository>/shared-cache/m2/repository</localRepository>-->
 
     <servers>
 
             <server>
-                <id>releases</id>
+                <id>bongo-releases</id>
                 <username>bongo-01</username>
-                <password>{7hhZUig5mJQHELosaIy7GYM1eZ2Lr0lkwFkBiN32/5x3+4hMx4X4FWmLq2pR0QHl}</password>
+                <password>{cHdwybHM/yAHXiB8e/7ZLy7vr77k+XtP9Xb6lWNk60sJicI6ZehaGyTq7F3KDdnq}</password>
                 <configuration>
                     <!-- Optimize authentication time when downloading.
                     Find out more: http://maven.apache.org/guides/mini/guide-http-settings.html#Example:_Using_Preemptive_Authentication -->
@@ -29,9 +45,22 @@
                 </configuration>
             </server>
             <server>
-                <id>snapshots</id>
+                <id>bongo-build-releases</id>
                 <username>bongo-01</username>
-                <password>rBXmVy7XB5D2g8kJ</password>
+                <password>{cHdwybHM/yAHXiB8e/7ZLy7vr77k+XtP9Xb6lWNk60sJicI6ZehaGyTq7F3KDdnq}</password>
+                <configuration>
+                    <wagonProvider>httpclient</wagonProvider>
+                    <httpConfiguration>
+                        <all>
+                            <usePreemptive>true</usePreemptive>
+                        </all>
+                    </httpConfiguration>
+                </configuration>
+            </server>
+            <server>
+                <id>bongo-snapshots</id>
+                <username>bongo-01</username>
+                <password>{cHdwybHM/yAHXiB8e/7ZLy7vr77k+XtP9Xb6lWNk60sJicI6ZehaGyTq7F3KDdnq}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -44,7 +73,7 @@
             <server>
                 <id>bongo-group</id>
                 <username>bongo-01</username>
-                <password>{7hhZUig5mJQHELosaIy7GYM1eZ2Lr0lkwFkBiN32/5x3+4hMx4X4FWmLq2pR0QHl}</password>
+                <password>{cHdwybHM/yAHXiB8e/7ZLy7vr77k+XtP9Xb6lWNk60sJicI6ZehaGyTq7F3KDdnq}</password>
                 <configuration>
                     <wagonProvider>httpclient</wagonProvider>
                     <httpConfiguration>
@@ -81,12 +110,18 @@
                 </pluginRepository>
             </pluginRepositories>
             <id>kazan-nexus</id>
+            <properties>
+                <scope>releases</scope>
+                <repo-name>bongo</repo-name>
+                <releases-repo-url>https://nexus.kazan.myworldline.com/repository/bongo-${scope}</releases-repo-url>
+                <snapshots-repo-url>https://nexus.kazan.myworldline.com/repository/bongo-snapshots</snapshots-repo-url>
+            </properties>
         </profile>
         <profile>
             <id>kazan-sonar</id>
             <properties>
-                <sonar.host.url>https://kazan.myworldline.com:443/sonarqube</sonar.host.url>
-                <sonar.login>{66j7Qs0lANUHv24yPvMPvrV4Ca3QQMl5L50nGBEwslrAMQl4kGgJKyeDOFax3tgev+3+7UoLLcIOQ3huwNpmkA&#61;&#61;}</sonar.login>
+                <sonar.host.url>https://kazan.myworldline.com/sonarqube</sonar.host.url>
+                <sonar.login>{CTokoy4ip2kHAl5dTOO8an4x+g+6YaAuItCKNxlrCjMSjCsUHOheSOK3pDnicbM9L5xvjsuuDkVP1P3btaTGug&#61;&#61;}</sonar.login>
             </properties>
         </profile>
     </profiles>
