@@ -59,7 +59,7 @@
         <mirrors>
             <mirror>
                 <mirrorOf>*</mirrorOf>
-                <url>https://nexus.kazan.atosworldline.com/repository/bongo-group</url>
+                <url>https://nexus.kazan.myworldline.com/repository/bongo-group</url>
                 <id>bongo-group</id>
             </mirror>
         </mirrors>
@@ -85,7 +85,7 @@
         <profile>
             <id>kazan-sonar</id>
             <properties>
-                <sonar.host.url>https://kazan.priv.atos.fr:443/sonarqube</sonar.host.url>
+                <sonar.host.url>https://kazan.myworldline.com:443/sonarqube</sonar.host.url>
                 <sonar.login>{66j7Qs0lANUHv24yPvMPvrV4Ca3QQMl5L50nGBEwslrAMQl4kGgJKyeDOFax3tgev+3+7UoLLcIOQ3huwNpmkA&#61;&#61;}</sonar.login>
             </properties>
         </profile>
