@@ -40,14 +40,14 @@
 <distributionManagement>
 
     <repository>
-        <id>releases</id>
+        <id>${repo-name}-${scope}</id>
         <name>My private Kazan Release Repository</name>
-        <url>https://nexus.kazan.myworldline.com/repository/bongo-releases</url>
+        <url>${releases-repo-url}</url>
     </repository>
     <snapshotRepository>
-        <id>snapshots</id>
+        <id>${repo-name}-snapshots</id>
         <name>My private Kazan Snapshot Repository</name>
-        <url>https://nexus.kazan.myworldline.com/repository/bongo-snapshots</url>
+        <url>${snapshots-repo-url}</url>
     </snapshotRepository>
 </distributionManagement>
   
